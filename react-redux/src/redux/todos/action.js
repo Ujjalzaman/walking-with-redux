@@ -22,7 +22,7 @@ export const colorSelected = (todoId,color) =>{
         },
     }
 }
-export const deletd = (todoId) =>{
+export const deleted = (todoId) =>{
     return {
         type: DELETED,
         payload: todoId,
