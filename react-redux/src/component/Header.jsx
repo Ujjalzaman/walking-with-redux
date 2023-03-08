@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import plusImg from '../assets/images/plus.png';
 import notesImg from '../assets/images/notes.png';
 import { useDispatch } from 'react-redux';
-import { added, completeAll } from '../redux/todo/action';
+import { added, completeAll, clearCompleted } from '../redux/todo/action';
 const Header = () => {
     const dispatch = useDispatch();
     const [input, setInput] = useState("");
@@ -16,6 +16,9 @@ const Header = () => {
     }
     const handleAllComplete = () =>{
         dispatch(completeAll());
+    }
+    const handleClearComplete = () =>{
+        dispatch(clearCompleted());
     }
 
     return (
@@ -52,7 +55,7 @@ const Header = () => {
                     />
                     <span onClick={handleAllComplete}>Complete All Tasks</span>
                 </li>
-                <li className="cursor-pointer">Clear completed</li>
+                <li className="cursor-pointer" onClick={handleClearComplete}>Clear completed</li>
             </ul>
         </div>
     )
