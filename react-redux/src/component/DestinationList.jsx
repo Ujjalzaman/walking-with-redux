@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import DestinationSingle from './DestinationSingle'
 const DestinationList = () => {
+    const state = useSelector((state) => state)
     return (
         <div className="table-container">
             <table className="booking-table">
@@ -15,9 +17,9 @@ const DestinationList = () => {
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-300/20" id="lws-previewBooked">
-                    <DestinationSingle />
-                    <DestinationSingle />
-                    <DestinationSingle />
+                    {state.length && state.map((data) =>(
+                        <DestinationSingle key={data.id} data={data}/>
+                    ))}
                 </tbody>
             </table>
         </div>

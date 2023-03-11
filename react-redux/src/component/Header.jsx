@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/img/lws-logo.svg'
 const Header = () => {
+    
     return (
         <header id="header">
             <div className="container">

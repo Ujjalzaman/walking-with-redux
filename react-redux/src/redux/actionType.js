@@ -1,0 +1,2 @@
+export const ADDBOOKING = 'ADDBOOKING';
+export const DELETEBOOKING = 'DELETEBOOKING';
