@@ -1,6 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
+  const state = useSelector((state) => state)
+
   return (
     <main className="py-16">
     <div className="container 2xl:px-8 px-2 mx-auto">
