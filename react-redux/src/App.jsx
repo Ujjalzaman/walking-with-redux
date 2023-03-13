@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
-import AddProduct from './components/AddProduct';
-import Cart from './components/cart';
-import Header from './components/Header';
-import { useSelector } from 'react-redux';
-const App = () => {
-  const state = useSelector((state) => state)
-  const [show, setShow] = useState(true);
-  console.log(state)
+import React from 'react';
+import { Provider } from 'react-redux';
+import LandingPage from './components/LandingPage';
+import store from './redux/store';
 
-  
+const App = () => {
   return (
-    <div>
-      <Header show={show} setShow={setShow} />
-      {show ? <AddProduct /> : <Cart />}
-    </div>
+    <Provider store={store}>
+      <LandingPage/>
+    </Provider>
   )
 }
 

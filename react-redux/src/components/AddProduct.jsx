@@ -45,7 +45,7 @@ const AddProduct = () => {
               </div>
               <div className="space-y-2">
                 <label htmlFor="lws-inputQuantity">Quantity</label>
-                <input onChange={handleOnChange} name="cartQuantity" className="addProductInput" type="number" id="lws-inputQuantity" required />
+                <input onChange={handleOnChange} name="inventory" className="addProductInput" type="number" id="lws-inputQuantity" required />
               </div>
             </div>
             <button type="submit" id="lws-inputSubmit" className="submit">Add Product</button>

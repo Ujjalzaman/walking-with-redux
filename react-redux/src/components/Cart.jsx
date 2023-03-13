@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const Cart = () => {
-  const state = useSelector((state) => state)
+const CartPage = () => {
+
 
   return (
     <main className="py-16">
@@ -17,7 +17,7 @@ const Cart = () => {
               <img className="lws-cartImage" src="https://i.dummyjson.com/data/products/40/thumbnail.jpg" alt="product" />
              
               <div className="space-y-2">
-                <h4 className="lws-cartName">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptop</h4>
+                <h4 className="lws-cartName">Fjallravengg - Foldsack No. 1 Backpack, Fits 15 Laptop</h4>
                 <p className="lws-cartCategory">Men's clothing</p>
                 <p>BDT <span className="lws-cartPrice">1100</span></p>
               </div>
@@ -75,4 +75,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPage;

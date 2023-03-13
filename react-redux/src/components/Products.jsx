@@ -20,7 +20,7 @@ const Products = () => {
               <p className="productPrice">BDT <span className="lws-price">{item.price}</span></p>
               <p className="productQuantity">QTY <span className="lws-quantity">{item.cartQuantity}</span></p>
             </div>
-            <button className="lws-btnAddToCart" onClick={() =>handleAddCart(itme.id)}>Add To Cart</button>
+            <button className="lws-btnAddToCart" onClick={() =>handleAddCart(item.id)}>Add To Cart</button>
           </div>
         </div>
       ))}
